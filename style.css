@@ -260,6 +260,10 @@ footer{
         top: 10px;
     }
 
+    .searchbar{
+        width: 100%;
+    }
+
     .main-container{
         max-width: 320px;
         position: relative;
@@ -475,6 +479,10 @@ footer{
         top: 10px;
     }
 
+    .searchbar{
+        width: 100%;
+    }
+
     .main-container{
         max-width: 481px;
         position: relative;
@@ -580,6 +588,10 @@ footer{
         align-items: baseline;
         height: 100px;
         top: 10px;
+    }
+
+    .searchbar{
+        width: 100%;
     }
 
     .main-container{
