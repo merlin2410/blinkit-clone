@@ -1,0 +1,324 @@
+@import url('./variables.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+/* Header Section */
+header .container{
+    display: flex;
+    align-items: center;
+    
+    position: fixed;
+    width: 100%;
+    height: 86px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    z-index: 1000;
+    background-color: var(--color-white);
+}
+
+.logo{
+    padding: 0px 25px;
+}
+
+.logo a svg{
+    width: 85%;
+}
+
+.location{
+    padding: 0px 25px;
+}
+
+.location .location-title{
+    font-size: 17px;
+    font-weight: var(--fw-700);
+    margin-bottom: 3px;
+    letter-spacing: 0.1px;
+}
+
+.location .location-desc{
+    font-size: 13px;
+    font-weight: var(--fw-300);
+}
+
+.fa-sort-down{
+    transform: translateY(-3px);
+    padding-left: 3px;
+}
+
+.searchbar{
+    
+    width: 50%;
+    border-radius: 8px;
+    background: var(--color-light-grey);
+    color: var(--color-grey);
+    box-shadow: none;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-left: 25px;
+}
+
+.searchbar .inputbar{
+    width: 100%;
+}
+
+.searchbar input{
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    font-size: 15px
+    
+}
+
+.searchbar .fa-magnifying-glass{
+    width: 17px;
+    color: var(--color-black);
+}
+
+.login{
+    font-size: 18px;
+    font-weight: var(--fw-400);
+    color: rgb(54, 54, 54);
+    padding: 0px 25px;
+}
+
+.cart{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--color-green);
+    width: 111px;
+    height: 50px;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+/* Main Section  */
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 85px;  
+}
+
+.main-container{
+    max-width: 1200px;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.banner2{
+    display: flex;
+    gap: 20px;
+    overflow: auto hidden;
+    margin: 0px 14px;
+}
+
+.banner2 img{
+    height: 195px;
+    width: 335px;
+}
+
+.banner2::-webkit-scrollbar{
+    display: none;
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(10,10%);
+}
+
+.category-img img{
+    width: 100%;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 14px;
+    row-gap: 30px;
+}
+
+.items .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.items .title .category-name{
+    color: rgb(28, 28, 28);
+    font-size: 24px;
+    font-weight: var(--fw-600);
+    line-height: 32px;
+}
+
+.items .title a{
+    text-decoration: none;
+    line-height: 32px;
+    font-size: 18px;
+    color: rgb(12, 131, 31);
+}
+
+.list-items{
+    display: flex;
+    column-gap: 15px;
+}
+
+.list-items .item{
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgb(232, 232, 232);
+    box-shadow: rgba(0, 0, 0, 0.04) 2px 2px 8px;
+    border-radius: 8px;
+    padding : 10px;
+}
+
+.item img{
+    width: 80%;
+}
+
+.item-details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.item-details .timer{
+    font-size: 8px;
+    font-weight: var(--fw-700);
+    background-color: var(--color-light-grey);
+}
+
+.item-details .item-name{
+    font-size: 14px;
+    font-weight: var(--fw-600);
+}
+
+.item-details .item-weight{
+    font-size: 12px;
+    color: var(--color-grey);
+
+}
+
+.item-details .item-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-price .price{
+    font-size: 12px;
+    font-weight: var(--fw-700);
+}
+
+.item-price button{
+    border: solid 1px var(--color-green);
+    color: var(--color-green);
+    width: 60px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: rgb(247, 255, 249);
+    text-transform: uppercase;
+}
+
+footer div svg{
+    color: red;
+}
+footer{
+    position: relative;
+    bottom: -132px;
+    margin-left: 538px;
+}
+
+@media only screen and (max-width: 480px){
+    .logo a svg{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+    .cart{
+        display: none;
+    }
+    header .container{
+        flex-direction: column;
+        align-items: baseline;
+        height: 100px;
+    }
+
+    .main-container{
+        max-width: 300px;
+    }
+    .banner img{
+        display: none;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 85px;  
+    }
+
+    .banner2 img {
+        height: 123px;
+        width: 185px;
+    }
+
+    .category-img img {
+        width: 300%;
+    }
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(3,10%);
+        column-gap: 56px;
+    }
+
+    .list-items {
+        display: flex;
+        gap: 18px;
+        overflow: auto hidden;
+    }
+
+    .item-details .item-name {
+        font-size: 8px;
+    
+    }
+/* 
+    .location .location-title{
+        font-size: 45px;
+    }
+    .location .location-desc{
+        font-size: 33px;
+    }
+
+    .searchbar{
+        height: 132px;
+        width: 100%;
+    }
+
+    .searchbar .fa-magnifying-glass{
+        width: 50px;
+        height: 47px;
+    }
+    .searchbar input {
+        font-size: 40px;
+        border: 1px solid var(--color-grey);
+        height: 82px;
+        width: 92%;
+        border-radius: 23px;
+    } */
+}
